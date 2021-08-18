@@ -1,0 +1,10 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace; // 5 7
+}
