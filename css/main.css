@@ -8,6 +8,14 @@
 
 body {
   background-color: #c5e4e7;
+  width: 23.4375rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 56.25rem) {
+  body {
+    width: 56rem;
+  }
 }
 
 p,
@@ -47,6 +55,16 @@ main {
   padding: 2rem;
 }
 
+@media screen and (min-width: 56.25rem) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
 main #input .inputBoxBill {
   position: relative;
 }
@@ -66,7 +84,7 @@ main #input .inputBoxBill #bill {
 main #input .inputBoxBill::before {
   position: absolute;
   content: url("../images/icon-dollar.svg");
-  top: 2.9rem;
+  bottom: 2.7rem;
   left: 1rem;
 }
 
@@ -102,6 +120,12 @@ main #input .flexBox .box {
   border-radius: 8px;
   background-color: #00494d;
   color: white;
+}
+
+@media screen and (min-width: 56.25rem) {
+  main #input .flexBox .box {
+    width: 7.5rem;
+  }
 }
 
 main #input .flexBox .box label {
@@ -145,6 +169,24 @@ main #input .inputBoxPeople {
   position: relative;
 }
 
+main #input .inputBoxPeople .flexBoxForError {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #input .inputBoxPeople .flexBoxForError label {
+  display: inline-block;
+}
+
+main #input .inputBoxPeople .flexBoxForError p.error {
+  display: none;
+  color: red;
+}
+
 main #input .inputBoxPeople #numPeople {
   width: 100%;
   margin-top: 0.5rem;
@@ -160,7 +202,7 @@ main #input .inputBoxPeople #numPeople {
 main #input .inputBoxPeople::before {
   position: absolute;
   content: url("../images/icon-person.svg");
-  top: 2.9rem;
+  bottom: 2.7rem;
   left: 1rem;
 }
 
@@ -180,6 +222,13 @@ main #output .gridBox {
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       grid-template-areas: "title result" "desc result";
+}
+
+@media screen and (min-width: 56.25rem) {
+  main #output .gridBox {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
 }
 
 main #output .gridBox p:first-child {
@@ -206,7 +255,7 @@ main #output .gridBox .result {
   grid-area: result;
   -ms-grid-column-align: right;
       justify-self: right;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #26c0ab;
 }
 
@@ -216,7 +265,7 @@ main #output .gridBox .result::before {
   top: 0;
   left: -1rem;
   color: #26c0ab;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 main #output button {
@@ -228,5 +277,11 @@ main #output button {
   text-transform: uppercase;
   color: #00494d;
   font-size: 1.2rem;
+}
+
+@media screen and (min-width: 56.25rem) {
+  main #output button {
+    margin-top: 6.5rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

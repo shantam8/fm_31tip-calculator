@@ -26,7 +26,7 @@
         <div class="inputBoxBill">
           <label for="bill" class="darkGrayishColor"> Bill </label>
 
-          <input type="number" id="bill" />
+          <input type="number" id="bill" placeholder="0"/>
         </div>
 
         <p class="darkGrayishColor">Select Tip %</p>
@@ -57,10 +57,14 @@
         </div>
 
         <div class="inputBoxPeople">
-          <label for="numPeople" class="darkGrayishColor">
+          <span class="flexBoxForError">
+
+            <label for="numPeople" class="darkGrayishColor">
             Number of People
           </label>
-          <input type="number" id="numPeople" />
+          <p class="error">Cant be zero.</p>
+        </span>
+          <input type="number" id="numPeople" placeholder="0"/>
         </div>
       </section>
 
@@ -68,12 +72,12 @@
         <div class="gridBox">
           <p>Tip Amount</p>
           <p>/ person</p>
-          <p class="result">5054,19</p>
+          <p class="result">0.00</p>
         </div>
         <div class="gridBox">
           <p>Total</p>
           <p>/ person</p>
-          <p class="result">54,91</p>
+          <p class="result">0.00</p>
         </div>
         <button>Reset</button>
       </section>

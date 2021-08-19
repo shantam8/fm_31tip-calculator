@@ -13,7 +13,7 @@
 @mixin inputBoxSymbol($image){
     position: absolute;
     content: url($image);
-    top: 2.9rem;
+    bottom: 2.7rem;
     left: 1rem;
 
 
