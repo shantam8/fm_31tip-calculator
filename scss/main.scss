@@ -2,9 +2,123 @@
 @import "fonts";
 @import "mixins";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Space Mono', monospace; // 5 7
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $lightGrayishCyan;
+}
+
+p,
+label,
+button,
+input {
+  font-family: "Space Mono", monospace; // 4 7
+  font-weight: 700;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+label {
+  display: block;
+}
+
+.darkGrayishColor {
+  color: $darkGrayishCyan;
+}
+
+header {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+main {
+  background-color: white;
+  border-radius: 16px;
+  padding: 2rem;
+
+  #input {
+    #bill {
+      @include inputBox;
+      position: relative;
+      
+      &::before {
+        position: absolute;
+        content: url("../images/icon-dollar.svg");
+        inset: 0 0 0 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        border: 1px solid red;
+      }
+    }
+
+    .flexBox {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 9rem;
+        height: 2.5rem;
+        border-radius: 8px;
+        background-color: $veryDarkCyan;
+        color: white;
+
+        label {
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+          text-align: center;
+          font-size: 1.5rem;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        input:checked + label {
+          background-color: $strongCyan;
+        }
+
+        input[type="radio"] {
+          display: none;
+        }
+
+        input[type="number"] {
+          @include inputBox;
+          margin: 0;
+          text-align: right;
+          height: 100%;
+          width: 100%;
+          border-radius: 6px;
+        }
+      }
+    }
+
+    #numPeople {
+      @include inputBox;
+    }
+  }
 }

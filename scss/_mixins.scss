@@ -1,0 +1,11 @@
+@mixin inputBox{
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 0.3rem 1rem;
+    background-color: $lightGrayishCyan1;
+    color: $veryDarkCyan;
+    text-align: right;
+    font-size: 1.5rem;
+    border: none;
+}

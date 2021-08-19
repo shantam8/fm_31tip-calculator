@@ -1,39 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/main.css">
-  <script src="js/main.js" defer></script>
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="js/main.js" defer></script>
 
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="Logo" />
+    </header>
 
-</head>
-<body>
+    <main>
+      <section id="input">
+        <label for="bill" class="darkGrayishColor"> Bill </label>
+        <input type="number" id="bill" />
 
-  Bill
+        <p class="darkGrayishColor">Select Tip %</p>
+        <div class="flexBox">
+          <div class="box">
+            <input type="radio" id="box5" name="selectTip" value="5"/>
+            <label for="box5"> 5% </label>
+          </div>
+          <div class="box">
+            <input type="radio" id="box10" name="selectTip" value="10"/>
+            <label for="box10"> 10% </label>
+          </div>
+          <div class="box">
+            <input type="radio" id="box15" name="selectTip" value="15"/>
+            <label for="box15"> 15% </label>
+          </div>
+          <div class="box">
+            <input type="radio" id="box25" name="selectTip" value="25"/>
+            <label for="box25"> 25% </label>
+          </div>
+          <div class="box">
+            <input type="radio" id="box50" name="selectTip" value="50"/>
+            <label for="box50"> 50% </label>
+          </div>
+          <div class="box">
+            <input type="number" id="customEntry" placeholder="Custom"/>
+            
+          </div>
+        </div>
+        <label for="numPeople" class="darkGrayishColor"> Number of People </label>
+        <input type="number" id="numPeople"/>
+      </section>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-
-</body>
+      <section id="output">
+        <div class="gridBox">
+          <p>Tip Amount</p>
+          <p>/ person</p>
+          <p class="result"></p>
+        </div>
+        <p>Total</p>
+        <p>/ person</p>
+        <p class="result"></p>
+        <button>Reset</button>
+      </section>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #c5e4e7;
+}
+
+p,
+label,
+button,
+input {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+label {
+  display: block;
+}
+
+.darkGrayishColor {
+  color: #5e7a7d;
+}
+
+header {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+main {
+  background-color: white;
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+main #input #bill {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.3rem 1rem;
+  background-color: #f4fafa;
+  color: #00494d;
+  text-align: right;
+  font-size: 1.5rem;
+  border: none;
+  position: relative;
+}
+
+main #input #bill::before {
+  position: absolute;
+  content: url("../images/icon-dollar.svg");
+  inset: 0 0 0 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border: 1px solid red;
+}
+
+main #input .flexBox {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+main #input .flexBox .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 9rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  background-color: #00494d;
+  color: white;
+}
+
+main #input .flexBox .box label {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+main #input .flexBox .box label:hover {
+  cursor: pointer;
+}
+
+main #input .flexBox .box input:checked + label {
+  background-color: #26c0ab;
+}
+
+main #input .flexBox .box input[type="radio"] {
+  display: none;
+}
+
+main #input .flexBox .box input[type="number"] {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.3rem 1rem;
+  background-color: #f4fafa;
+  color: #00494d;
+  text-align: right;
+  font-size: 1.5rem;
+  border: none;
+  margin: 0;
+  text-align: right;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+}
+
+main #input #numPeople {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.3rem 1rem;
+  background-color: #f4fafa;
+  color: #00494d;
+  text-align: right;
+  font-size: 1.5rem;
+  border: none;
+}
+/*# sourceMappingURL=main.css.map */
