@@ -9,3 +9,12 @@
     font-size: 1.5rem;
     border: none;
 }
+
+@mixin inputBoxSymbol($image){
+    position: absolute;
+    content: url($image);
+    top: 2.9rem;
+    left: 1rem;
+
+
+}

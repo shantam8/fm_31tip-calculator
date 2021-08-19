@@ -47,7 +47,11 @@ main {
   padding: 2rem;
 }
 
-main #input #bill {
+main #input .inputBoxBill {
+  position: relative;
+}
+
+main #input .inputBoxBill #bill {
   width: 100%;
   margin-top: 0.5rem;
   margin-bottom: 2rem;
@@ -57,19 +61,13 @@ main #input #bill {
   text-align: right;
   font-size: 1.5rem;
   border: none;
-  position: relative;
 }
 
-main #input #bill::before {
+main #input .inputBoxBill::before {
   position: absolute;
   content: url("../images/icon-dollar.svg");
-  inset: 0 0 0 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  border: 1px solid red;
+  top: 2.9rem;
+  left: 1rem;
 }
 
 main #input .flexBox {
@@ -143,7 +141,11 @@ main #input .flexBox .box input[type="number"] {
   border-radius: 6px;
 }
 
-main #input #numPeople {
+main #input .inputBoxPeople {
+  position: relative;
+}
+
+main #input .inputBoxPeople #numPeople {
   width: 100%;
   margin-top: 0.5rem;
   margin-bottom: 2rem;
@@ -153,5 +155,78 @@ main #input #numPeople {
   text-align: right;
   font-size: 1.5rem;
   border: none;
+}
+
+main #input .inputBoxPeople::before {
+  position: absolute;
+  content: url("../images/icon-person.svg");
+  top: 2.9rem;
+  left: 1rem;
+}
+
+main #output {
+  padding: 1.5rem;
+  padding-top: 2rem;
+  border-radius: 19px;
+  background-color: #00494d;
+}
+
+main #output .gridBox {
+  margin-bottom: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "title result" "desc result";
+}
+
+main #output .gridBox p:first-child {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+  font-size: 1rem;
+  color: white;
+}
+
+main #output .gridBox p:nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: desc;
+  color: #7f9c9f;
+  font-size: 0.8rem;
+}
+
+main #output .gridBox .result {
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: result;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  font-size: 1.5rem;
+  color: #26c0ab;
+}
+
+main #output .gridBox .result::before {
+  position: absolute;
+  content: "$";
+  top: 0;
+  left: -1rem;
+  color: #26c0ab;
+  font-size: 1.5rem;
+}
+
+main #output button {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  background-color: #26c0ab;
+  text-transform: uppercase;
+  color: #00494d;
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=main.css.map */

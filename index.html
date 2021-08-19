@@ -23,49 +23,58 @@
 
     <main>
       <section id="input">
-        <label for="bill" class="darkGrayishColor"> Bill </label>
-        <input type="number" id="bill" />
+        <div class="inputBoxBill">
+          <label for="bill" class="darkGrayishColor"> Bill </label>
+
+          <input type="number" id="bill" />
+        </div>
 
         <p class="darkGrayishColor">Select Tip %</p>
         <div class="flexBox">
           <div class="box">
-            <input type="radio" id="box5" name="selectTip" value="5"/>
+            <input type="radio" id="box5" name="selectTip" value="5" />
             <label for="box5"> 5% </label>
           </div>
           <div class="box">
-            <input type="radio" id="box10" name="selectTip" value="10"/>
+            <input type="radio" id="box10" name="selectTip" value="10" />
             <label for="box10"> 10% </label>
           </div>
           <div class="box">
-            <input type="radio" id="box15" name="selectTip" value="15"/>
+            <input type="radio" id="box15" name="selectTip" value="15" />
             <label for="box15"> 15% </label>
           </div>
           <div class="box">
-            <input type="radio" id="box25" name="selectTip" value="25"/>
+            <input type="radio" id="box25" name="selectTip" value="25" />
             <label for="box25"> 25% </label>
           </div>
           <div class="box">
-            <input type="radio" id="box50" name="selectTip" value="50"/>
+            <input type="radio" id="box50" name="selectTip" value="50" />
             <label for="box50"> 50% </label>
           </div>
           <div class="box">
-            <input type="number" id="customEntry" placeholder="Custom"/>
-            
+            <input type="number" id="customEntry" placeholder="Custom" />
           </div>
         </div>
-        <label for="numPeople" class="darkGrayishColor"> Number of People </label>
-        <input type="number" id="numPeople"/>
+
+        <div class="inputBoxPeople">
+          <label for="numPeople" class="darkGrayishColor">
+            Number of People
+          </label>
+          <input type="number" id="numPeople" />
+        </div>
       </section>
 
       <section id="output">
         <div class="gridBox">
           <p>Tip Amount</p>
           <p>/ person</p>
-          <p class="result"></p>
+          <p class="result">5054,19</p>
         </div>
-        <p>Total</p>
-        <p>/ person</p>
-        <p class="result"></p>
+        <div class="gridBox">
+          <p>Total</p>
+          <p>/ person</p>
+          <p class="result">54,91</p>
+        </div>
         <button>Reset</button>
       </section>
     </main>
