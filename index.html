@@ -24,47 +24,48 @@
     <main>
       <section id="input">
         <div class="inputBoxBill">
-          <label for="bill" class="darkGrayishColor"> Bill </label>
-
-          <input type="number" id="bill" placeholder="0"/>
+          <span class="flexBoxForError">
+            <label for="inputBill" class="darkGrayishColor"> Bill </label>
+            <p id="inputBillErrorMsg" class="error">Wrong format: 00.00</p>
+          </span>
+          <input type="text" id="inputBill" placeholder="0.00" maxlength="7" />
         </div>
 
         <p class="darkGrayishColor">Select Tip %</p>
         <div class="flexBox">
-          <div class="box">
+          <div class="box radioBox">
             <input type="radio" id="box5" name="selectTip" value="5" />
             <label for="box5"> 5% </label>
           </div>
-          <div class="box">
+          <div class="box radioBox">
             <input type="radio" id="box10" name="selectTip" value="10" />
             <label for="box10"> 10% </label>
           </div>
-          <div class="box">
+          <div class="box radioBox">
             <input type="radio" id="box15" name="selectTip" value="15" />
             <label for="box15"> 15% </label>
           </div>
-          <div class="box">
+          <div class="box radioBox">
             <input type="radio" id="box25" name="selectTip" value="25" />
             <label for="box25"> 25% </label>
           </div>
-          <div class="box">
+          <div class="box radioBox">
             <input type="radio" id="box50" name="selectTip" value="50" />
             <label for="box50"> 50% </label>
           </div>
           <div class="box">
-            <input type="number" id="customEntry" placeholder="Custom" />
+            <input type="number" id="customEntry" placeholder="Custom" min="0" max="100" />
           </div>
         </div>
 
         <div class="inputBoxPeople">
           <span class="flexBoxForError">
-
-            <label for="numPeople" class="darkGrayishColor">
-            Number of People
-          </label>
-          <p class="error">Cant be zero.</p>
-        </span>
-          <input type="number" id="numPeople" placeholder="0"/>
+            <label for="inputPerson" class="darkGrayishColor">
+              Number of People
+            </label>
+            <p id="inputPersonErrorMsg" class="error">1 to 99</p>
+          </span>
+          <input type="number" id="inputPerson" placeholder="0" min="1" max="99"/>
         </div>
       </section>
 
@@ -72,14 +73,14 @@
         <div class="gridBox">
           <p>Tip Amount</p>
           <p>/ person</p>
-          <p class="result">0.00</p>
+          <p id="resultTip" class="result">0.00</p>
         </div>
         <div class="gridBox">
           <p>Total</p>
           <p>/ person</p>
-          <p class="result">0.00</p>
+          <p id="resultTotal" class="result">0.00</p>
         </div>
-        <button>Reset</button>
+        <button id="btnReset">Reset</button>
       </section>
     </main>
   </body>

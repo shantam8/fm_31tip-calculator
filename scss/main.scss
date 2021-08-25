@@ -65,9 +65,25 @@ main {
     .inputBoxBill {
       position: relative;
 
-      #bill {
-        @include inputBox;
+      .flexBoxForError {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+          display: inline-block;
+        }
+
+        p.error {
+          display: none;
+          color: red;
+        }
       }
+
+      #inputBill {
+        @include inputBox;
+        @include inputBoxErrorOutline;
+      }
+
       &::before {
         @include inputBoxSymbol("../images/icon-dollar.svg");
       }
@@ -110,6 +126,7 @@ main {
 
         input:checked + label {
           background-color: $strongCyan;
+          color: $veryDarkCyan;
         }
 
         input[type="radio"] {
@@ -118,6 +135,7 @@ main {
 
         input[type="number"] {
           @include inputBox;
+
           margin: 0;
           text-align: right;
           height: 100%;
@@ -130,22 +148,25 @@ main {
     .inputBoxPeople {
       position: relative;
 
-      .flexBoxForError{
+      .flexBoxForError {
         display: flex;
         justify-content: space-between;
-       
+
         label {
           display: inline-block;
         }
-       
+
         p.error {
           display: none;
+
           color: red;
         }
       }
 
-      #numPeople {
+      #inputPerson {
         @include inputBox;
+
+        @include inputBoxErrorOutline;
       }
 
       &::before {

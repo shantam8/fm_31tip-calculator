@@ -1,20 +1,24 @@
-@mixin inputBox{
-    width: 100%;
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
-    padding: 0.3rem 1rem;
-    background-color: $lightGrayishCyan1;
-    color: $veryDarkCyan;
-    text-align: right;
-    font-size: 1.5rem;
-    border: none;
+@mixin inputBox {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.3rem 1rem;
+  background-color: $lightGrayishCyan1;
+  color: $veryDarkCyan;
+  text-align: right;
+  font-size: 1.5rem;
+  border: none;
 }
 
-@mixin inputBoxSymbol($image){
-    position: absolute;
-    content: url($image);
-    bottom: 2.7rem;
-    left: 1rem;
+@mixin inputBoxErrorOutline {
+  &.error {
+    outline: 2px solid red;
+  }
+}
 
-
+@mixin inputBoxSymbol($image) {
+  position: absolute;
+  content: url($image);
+  bottom: 2.7rem;
+  left: 1rem;
 }
