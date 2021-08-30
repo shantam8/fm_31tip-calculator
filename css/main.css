@@ -10,11 +10,26 @@ body {
   background-color: #c5e4e7;
   width: 23.4375rem;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 56.25rem) {
   body {
     width: 56rem;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -24,6 +39,17 @@ button,
 input {
   font-family: "Space Mono", monospace;
   font-weight: 700;
+}
+
+input,
+label {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+input:hover,
+label:hover {
+  cursor: pointer;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -304,6 +330,20 @@ main #output button {
   text-transform: uppercase;
   color: #00494d;
   font-size: 1.2rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main #output button:hover {
+  cursor: pointer;
+  outline: 1px solid greenyellow;
+}
+
+main #output button:active {
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  color: red;
+  outline: 1px solid red;
 }
 
 @media screen and (min-width: 56.25rem) {

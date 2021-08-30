@@ -46,7 +46,7 @@ function customEntryHandler() {
   ) {
     checkInputsForCalculation();
   } else {
-    customEntry.value = "";
+    customEntry.value = "error";
   }
 }
 
@@ -86,11 +86,11 @@ function calculateResult(bill, people, tip) {
   console.log(" Calculation Total: " + totalCalc);
 
   resultTip.innerText = tipCalc.toLocaleString("de-DE", {
-    maximumFractionDigits: 2,
+    maximumFractionDigits: 2, minimumFractionDigits: 2
   });
 
   resultTotal.innerText = totalCalc.toLocaleString("de-DE", {
-    maximumFractionDigits: 2,
+    maximumFractionDigits: 2, minimumFractionDigits: 2
   });
 }
 
@@ -99,6 +99,8 @@ function resetApp() {
   inputPerson.value = "";
   customEntry.value = "";
   resetRadioBoxes();
+  resultTip.innerText = "0.00";
+  resultTotal.innerText = "0.00";
 }
 
 function resetRadioBoxes() {
@@ -107,13 +109,15 @@ function resetRadioBoxes() {
 
 function resetCustomField() {
   customEntry.value = "";
+  console.log("1");
   checkInputsForCalculation();
 }
+
 
 function init() {
   btnReset.addEventListener("click", resetApp);
   radioBoxes.forEach((box) => {
-    box.addEventListener("click", resetCustomField);
+    box.addEventListener("change", resetCustomField);
   });
   inputBill.addEventListener("blur", checkBillInput);
   inputPerson.addEventListener("blur", checkPersonInput);
