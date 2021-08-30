@@ -24,12 +24,12 @@
     <main>
       <section id="input">
         <div class="inputBoxBill">
-          <span class="flexBoxForError">
+          <div class="flexBoxForError">
             <label for="inputBill" class="darkGrayishColor"> Bill </label>
             <div>
               <p id="inputBillErrorMsg" class="error">Wrong format: 00.00</p>
             </div>
-          </span>
+          </div>
           <input type="text" id="inputBill" placeholder="0.00" maxlength="7" />
         </div>
 
@@ -67,14 +67,12 @@
         </div>
 
         <div class="inputBoxPeople">
-          <span class="flexBoxForError">
+          <div class="flexBoxForError">
             <label for="inputPerson" class="darkGrayishColor">
               Number of People
             </label>
-            <div>
-              <p id="inputPersonErrorMsg" class="error">1 to 99</p>
-            </div>
-          </span>
+            <p id="inputPersonErrorMsg" class="error">1 to 99</p>
+          </div>
           <input
             type="number"
             id="inputPerson"
