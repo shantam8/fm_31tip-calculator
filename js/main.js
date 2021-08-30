@@ -103,6 +103,7 @@ function resetApp() {
   resultTotal.innerText = "0.00";
 }
 
+
 function resetRadioBoxes() {
   radioBoxes.forEach((box) => (box.children[0].checked = false));
 }
