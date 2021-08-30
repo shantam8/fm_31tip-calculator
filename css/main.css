@@ -75,6 +75,12 @@ header {
   text-align: center;
 }
 
+@media screen and (min-width: 56.25rem) {
+  header {
+    margin-top: 0;
+  }
+}
+
 main {
   background-color: white;
   border-radius: 16px;
