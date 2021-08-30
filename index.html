@@ -26,7 +26,9 @@
         <div class="inputBoxBill">
           <span class="flexBoxForError">
             <label for="inputBill" class="darkGrayishColor"> Bill </label>
-            <p id="inputBillErrorMsg" class="error">Wrong format: 00.00</p>
+            <div>
+              <p id="inputBillErrorMsg" class="error">Wrong format: 00.00</p>
+            </div>
           </span>
           <input type="text" id="inputBill" placeholder="0.00" maxlength="7" />
         </div>
@@ -54,7 +56,13 @@
             <label for="box50"> 50% </label>
           </div>
           <div class="box">
-            <input type="number" id="customEntry" placeholder="Custom" min="0" max="100" />
+            <input
+              type="number"
+              id="customEntry"
+              placeholder="Custom"
+              min="0"
+              max="100"
+            />
           </div>
         </div>
 
@@ -63,9 +71,17 @@
             <label for="inputPerson" class="darkGrayishColor">
               Number of People
             </label>
-            <p id="inputPersonErrorMsg" class="error">1 to 99</p>
+            <div>
+              <p id="inputPersonErrorMsg" class="error">1 to 99</p>
+            </div>
           </span>
-          <input type="number" id="inputPerson" placeholder="0" min="1" max="99"/>
+          <input
+            type="number"
+            id="inputPerson"
+            placeholder="0"
+            min="1"
+            max="99"
+          />
         </div>
       </section>
 
